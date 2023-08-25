@@ -4,19 +4,19 @@ const btnCart = document.getElementById('btn-cart');
 
 const infoCards = [
   {
-    img: "apple-gala.png",
+    img: "./apple-gala.png",
     name: "Maçã Gala Importada",
     price: "1,52",
     qtd: "(Unidade)",
   },
   {
-    img: "apple-granny-smith.png",
+    img: "./apple-granny-smith.png",
     name: "Maçã Granny Smith",
     price: "2,87",
     qtd: "(Unidade)",
   },
   {
-    img: "apple-fuji.png",
+    img: "./apple-fuji.png",
     name: "Maçã Fuji",
     price: "1,22",
     qtd: "(Unidade)",
