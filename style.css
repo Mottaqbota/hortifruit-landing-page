@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter";
+    transition: all 0.1s ease-in-out;
+}
+
+i {
+    font-size: 20px;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding: .5rem;
+    font-weight: 600;
+    border-radius: 6px;
+    color: var(--white);
+    background: var(--dark-blue);
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem;
+}
+
+:root {
+    --light-red: #E25858;
+    --light-yellow: #E9D6AF;
+    --white: #FFFFDD;
+    --dark-blue-texts: #384252;
+    --dark-blue: #0A1018;
+}
+
+/* ============== Header ============== */
+header {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 10vh;
+    padding: 0 1rem;
+    background: var(--light-yellow);
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 2rem;
+}
+
+.logo-apple {
+    height: 90%;
+    mix-blend-mode: darken;
+}
+
+.link-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    height: 100%;
+    gap: .5rem;
+    color: #384252;
+}
+.link-nav.--link-active {
+    font-weight: 600;
+    color: var(--light-red);
+    border-bottom: solid 4px var(--light-red);
+}
+
+
+/* ============== Card ============== */
+.card-fruit {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 200px;
+    min-height: 300px;
+    gap: .5rem;
+    padding: 1rem;
+    border-radius: 12px;
+    background: var(--light-yellow);
+}
+
+/* ----- Imagem Card ----- */
+.img-card {
+    width: 80%;
+    height: 50%;
+    object-fit: cover;
+}
+
+/* ----- Price Item ----- */
+.container-price {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.name-item {
+    font-size: 16px;
+    color: var(--dark-blue-texts);
+}
+.price-item {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--dark-blue);
+}
+.price-item::before {
+    content: "R$";
+}
+.qtd-item {
+    font-size: 12px;
+}
+
+/* ----- Adicionar ao Carrinho ----- */
+.btn-addcart {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    background: var(--light-red);
+}.btn-addcart:hover {
+    cursor: pointer;
+    /* opacity: 0.8; */
+    color: var(--light-red);
+    background: var(--light-yellow);
+    outline: solid 4px var(--light-red);
+}
+
+/* ============ { Section Cart } ============ */
+#container-cart {
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    backdrop-filter: blur(5px);
+}
+
+.card-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    width: 100px;
+    background: var(--light-yellow);
+}
+
+.img-cart {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
